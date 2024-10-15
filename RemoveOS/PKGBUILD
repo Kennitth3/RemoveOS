@@ -1,0 +1,14 @@
+# Maintainer: Your Name <vegakennitth@gmail.com>
+pkgname=RemoveOS
+pkgver=1.0
+pkgrel=1
+pkgdesc="A simple but dangerous pkg, a combination of suicide linux and the package manager"
+arch=('any')  # 'any' is fine for shell scripts
+license=('None')  # Specify the license you choose
+source=("RemoveOS.sh")  # Name of your script
+md5sums=('SKIP')  # Replace with actual checksum if needed
+
+package() {
+  install -Dm755 "$srcdir/$source" "$pkgdir/usr/bin/$pkgname"  # Install the script
+}
+
